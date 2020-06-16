@@ -1,0 +1,26 @@
+<html lang="ja">
+  <head>
+    <script>
+      function test() {
+        var x = document.getElementById("b").value; //xの中にbとついたINPUTの中身を代入
+        var call = "";
+        var kaijyou = 1;
+        for (var i = 1; i <= x; i++) {
+          kaijyou = kaijyou * i;
+
+          call = call + "<li>" + i + "の階乗は" + kaijyou + "</li>";
+        }
+        document.getElementById("a").innerHTML = call; //繰り返しのcallを呼び出す
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>課題11-2</h1>
+    もとめる回数
+    <input id="b" type="text" />
+    <button onclick="test()">計算</button>
+    <ul id="a"></ul>
+    <script src="index.js"></script>
+  </body>
+</html>

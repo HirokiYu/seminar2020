@@ -1,0 +1,25 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      function text() {
+        var call = "";
+
+        for (var i = 1; i < 11; i++) {
+          var random = Math.floor(Math.random() * 10 + 1); //　ランダム1-10の生成
+          call = call + "<li>" + random + "</li>";
+        }
+
+        document.getElementById("a").innerHTML = call; //id a のついた箱にcallの命令を代入
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>課題11-1</h1>
+    <button onclick="text()">乱数生成</button>
+    <ul id="a">
+      <li>1</li>
+    </ul>
+  </body>
+</html>
