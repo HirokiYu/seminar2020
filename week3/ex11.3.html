@@ -2,22 +2,38 @@
   <head>
     <meta charset="utf-8" />
   </head>
-  <script></script>
+  <script>
+    function buttonPressed() {
+      var call = "";
+      var fizz = "";
+      var buzz = "";
+      var f = "";
+      for (var i = 1; i <= 20; i++) {
+        if (i % 15 == 0) {
+          f = "fizzbuzz";
+        } else if (i % 5 == 0) {
+          f = "buzz";
+        } else if (i % 3 == 0) {
+          f = "fizz";
+        } else {
+          f = "";
+        }
+
+        call =
+          call + "<tr>" + "<td>" + i + "</td>" + "<td>" + f + "</td>" + "</tr>"; //trは行を変える、tdは列
+      }
+      document.getElementById("x").innerHTML = call;
+    }
+  </script>
   <style>
     table,
     td {
-      border: 1px solid brown;　
+      border: 1px solid brown;
     }
   </style>
   <body>
     <h1>課題11-3</h1>
-    <table>
-      <tr>
-        <td>
-          1
-        </td>
-      </tr>
-    </table>
+    <table id="x"></table>
     <button onclick="buttonPressed()">生成</button>
     <hr />
 

@@ -1,0 +1,35 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      function calc() {
+        var tate = "";
+        var yoko = "";
+        var html = '<table border ="1">';
+        for (var j = 1; j <= 9; j++) {
+          html = html + "<tr>";
+          for (var i = 1; i <= 9; i++) {
+            var x = i * j;
+            html = html + "<td>" + x + "</td>";
+          }
+        }
+
+        document.getElementById("a").innerHTML = html;
+      }
+    </script>
+    <style>
+      table,
+      td {
+        border: 1px solid brown;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>課題11-4</h1>
+    <table id="a"></table>
+    <button onclick="calc()">計算</button><br />
+
+    <script src="index.js"></script>
+  </body>
+</html>
